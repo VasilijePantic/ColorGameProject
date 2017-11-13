@@ -12,21 +12,10 @@ will dissappear. That will happen to evey square until your choice is right.
 
 You are also able to reset all the color options clicking on the "New Colors" button,so automatically,the game will reset.
 
-This app was logic was mostly based around 'eventListeners' to manipulate the objects and 'if' statements to chose between the objects.
+This app was logic was mostly based around 'eventListeners' to manipulate the objects,functions and 'if' statements to chose between the objects.
 
 Code example:
-	hardBtn.addEventListener("click", function() {
-		hardBtn.classList.add("selected");
-		easyBtn.classList.remove("selected");
-		numSquares = 6;
-		colors = generateRandomColors(numSquares);
-		pickedColor = pickColor();
-		colorDisplay.textContent = pickedColor;
-		for(var i = 0; i < squares.length; i++) {
-		squares[i].style.backgroundColor = colors[i];
-		squares[i].style.display = "block";
-		}
-	});	
+	
 
 	function randomColor() {
 		//pick a "red" from 0 - 255
