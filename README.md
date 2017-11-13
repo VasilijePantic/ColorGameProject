@@ -15,17 +15,18 @@ You are also able to reset all the color options clicking on the "New Colors" bu
 This app was logic was mostly based around 'eventListeners' to manipulate the objects and 'if' statements to chose between the objects.
 
 Code example:
-	function generateRandomColors(num) {
-		//make an array
-		var arr = [];
-		//add num random colors to arr
-		for(var i = 0; i < num; i++) {
-		//get random color and push into arr
-		arr.push(randomColor());
+	hardBtn.addEventListener("click", function() {
+		hardBtn.classList.add("selected");
+		easyBtn.classList.remove("selected");
+		numSquares = 6;
+		colors = generateRandomColors(numSquares);
+		pickedColor = pickColor();
+		colorDisplay.textContent = pickedColor;
+		for(var i = 0; i < squares.length; i++) {
+		squares[i].style.backgroundColor = colors[i];
+		squares[i].style.display = "block";
 		}
-		//return that array
-		return arr;
-	}
+	});	
 
 	function randomColor() {
 		//pick a "red" from 0 - 255
@@ -35,8 +36,9 @@ Code example:
 		//pick a "blue" from 0 - 255
 		var b = Math.floor(Math.random() * 256);
 		return "rgb(" + r + ", " + g + ", " + b + ")";
-	}
+	};
 
 The app works perfectly and is full responsive.
 
-This project is a direct result JavaScript and DOM learning process from Udemy's "The Web Developer Bootcamp".
+This project is a direct result JavaScript and DOM learning process from Udemy's "The Web Developer Bootcamp" as a codealong project to summ
+up all the major things learned until this point.
